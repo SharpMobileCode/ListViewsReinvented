@@ -1,0 +1,69 @@
+﻿
+using System.Collections.Generic;
+using Android.App;
+using Android.OS;
+using Android.Support.V7.Widget;
+using Android.Content;
+
+namespace HorizontalRecyclerView.Droid
+{
+    [Activity(Label = "HorizontalRecyclerView.Droid Sample App", MainLauncher = true, Icon = "@drawable/icon")]
+    public class MainActivity : Activity
+    {
+        private RecyclerView _recyclerView;
+        private RecyclerView.LayoutManager _layoutManager;
+        private CrewMemberRecyclerViewAdapter _adapter;
+
+        private ProgressDialog _progressDialog;
+
+        protected override async void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+
+            SetContentView(Resource.Layout.Main);
+
+            _progressDialog = new ProgressDialog(this);
+            _progressDialog.SetProgressStyle(ProgressDialogStyle.Spinner);
+            _progressDialog.SetMessage("Loading crew manifest . . .");
+            _progressDialog.Show();
+
+            //Create a layout manager for our RecyclerView.  In this case we 
+            //want a grid layout with 1 row, with a Horizontal orientation.
+            //This mimicks a Horizontal List View.  But feel free to play around with the 
+            //spanCount and other Layout Managers! You can make some cool looking UIs!!!
+            _layoutManager = new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false);
+
+            //Create a reference to our RecyclerView and set the layout manager;
+            _recyclerView = FindViewById<RecyclerView>(Resource.Id.mainActivity_recyclerView);
+            _recyclerView.SetLayoutManager(_layoutManager);
+
+            //Get our crew member data. This could be a web service.
+            SharedData.CrewManifest = await CrewManifest.GetAllCrewAsync();
+
+            //Create the adapter for the RecyclerView with our crew data, and set
+            //the adapter. Also, wire an event handler for when the user taps on each
+            //individual item.
+            _adapter = new CrewMemberRecyclerViewAdapter(SharedData.CrewManifest, this.Resources);
+            _adapter.ItemClick += OnItemClick;
+            _recyclerView.SetAdapter(_adapter);
+
+            _progressDialog.Dismiss();
+        }
+
+        private void OnItemClick (object sender, int position)
+        {
+            var crewProfileIntent = new Intent(this, typeof(CrewMemberProfileActivity));
+            crewProfileIntent.PutExtra("index", position);
+            crewProfileIntent.PutExtra("imageResourceId", SharedData.CrewManifest[position].PhotoResourceId);
+
+            StartActivity(crewProfileIntent);
+        }
+    }
+
+    internal static class SharedData
+    {
+        public static List<CrewMember> CrewManifest { get; set;}
+    }
+}
+
+

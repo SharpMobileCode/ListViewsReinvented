@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linearLayoutBiography">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:paddingBottom="4dp">
+        <ImageView
+            android:id="@+id/crewMemberImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="false"
+            android:padding="5dp" />
+        <TextView
+            android:id="@+id/crewMemberRankTextView"
+            android:layout_toRightOf="@id/crewMemberImageView"
+            android:text="Rank"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp" />
+        <TextView
+            android:id="@+id/crewMemberNameTextView"
+            android:layout_toRightOf="@id/crewMemberImageView"
+            android:layout_below="@id/crewMemberRankTextView"
+            android:text="Crew Member Name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp" />
+        <TextView
+            android:id="@+id/crewMemberPositionTextView"
+            android:layout_toRightOf="@id/crewMemberImageView"
+            android:layout_below="@id/crewMemberNameTextView"
+            android:text="Position"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp" />
+        <TextView
+            android:id="@+id/crewMemberPostingTextView"
+            android:layout_toRightOf="@id/crewMemberImageView"
+            android:layout_below="@id/crewMemberPositionTextView"
+            android:text="Posting"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp" />
+        <TextView
+            android:id="@+id/crewMemberSpeciesTextView"
+            android:layout_toRightOf="@id/crewMemberImageView"
+            android:layout_below="@id/crewMemberPostingTextView"
+            android:text="Species: Human"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutBiography">
+        <TextView
+            android:id="@+id/crewMemberBioTextView"
+            android:layout_toRightOf="@id/crewMemberImageView"
+            android:layout_below="@id/crewMemberSpeciesTextView"
+            android:text="Biography"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp" />
+    </LinearLayout>
+</LinearLayout>
