@@ -5,7 +5,7 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Content.Res;
 
-namespace HorizontalRecyclerView.Droid
+namespace ListViewsReinvented.Droid
 {
     public class CrewMemberRecyclerViewAdapter : RecyclerView.Adapter
     {

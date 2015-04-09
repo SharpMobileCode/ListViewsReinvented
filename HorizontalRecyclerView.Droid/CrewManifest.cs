@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Collections.Generic;
 
-namespace HorizontalRecyclerView.Droid
+namespace ListViewsReinvented.Droid
 {
     public static class CrewManifest
     {

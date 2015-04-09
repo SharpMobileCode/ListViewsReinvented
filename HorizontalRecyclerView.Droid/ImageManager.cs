@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Android.Content.Res;
 using Android.Graphics;
 
-namespace HorizontalRecyclerView.Droid
+namespace ListViewsReinvented.Droid
 {
     public class ImageManager : IDisposable
     {

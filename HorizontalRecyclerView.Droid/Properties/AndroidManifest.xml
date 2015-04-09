@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="HorizontalRecyclerView.Droid">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="ListViewsReinvented.Droid">
 	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="19" />
-	<application android:label="HorizontalRecyclerView.Droid">
+	<application android:label="ListViewsReinvented.Droid">
 	</application>
 </manifest>

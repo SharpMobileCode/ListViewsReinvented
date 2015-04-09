@@ -5,9 +5,9 @@ using Android.OS;
 using Android.Support.V7.Widget;
 using Android.Content;
 
-namespace HorizontalRecyclerView.Droid
+namespace ListViewsReinvented.Droid
 {
-    [Activity(Label = "HorizontalRecyclerView.Droid Sample App", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "ListViews Reinvented", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         private RecyclerView _recyclerView;

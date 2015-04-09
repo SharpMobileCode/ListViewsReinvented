@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{64204F35-F276-4D01-BE37-E888E8D0C179}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>HorizontalRecyclerView.Droid</RootNamespace>
+    <RootNamespace>ListViewsReinvented.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <AndroidResgenClass>Resource</AndroidResgenClass>

@@ -1,5 +1,5 @@
 ﻿
-namespace HorizontalRecyclerView.Droid
+namespace ListViewsReinvented.Droid
 {
     public class CrewMember
     {

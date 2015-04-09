@@ -3,7 +3,7 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 
-namespace HorizontalRecyclerView.Droid
+namespace ListViewsReinvented.Droid
 {
     //The ViewHolder Pattern is built into the RecyclerView,
     //So we must create a view holder as this will act as a cache

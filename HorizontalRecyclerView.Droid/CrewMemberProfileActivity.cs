@@ -5,7 +5,7 @@ using Android.App;
 using Android.OS;
 using Android.Widget;
 
-namespace HorizontalRecyclerView.Droid
+namespace ListViewsReinvented.Droid
 {
     [Activity(Label = "Profile")]			
     public class CrewMemberProfileActivity : Activity
