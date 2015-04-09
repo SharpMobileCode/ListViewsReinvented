@@ -27,11 +27,21 @@ namespace HorizontalRecyclerView.Droid
             _progressDialog.SetMessage("Loading crew manifest . . .");
             _progressDialog.Show();
 
+            //Create
+
+            //If the device is portrait, then show the RecyclerView in a vertical list,
+            //else show it in horizontal list.
+            _layoutManager = Resources.Configuration.Orientation == Android.Content.Res.Orientation.Portrait 
+                ? new LinearLayoutManager(this, LinearLayoutManager.Vertical, false) 
+                : new LinearLayoutManager(this, LinearLayoutManager.Horizontal, false);
+
+
             //Create a layout manager for our RecyclerView.  In this case we 
             //want a grid layout with 1 row, with a Horizontal orientation.
             //This mimicks a Horizontal List View.  But feel free to play around with the 
             //spanCount and other Layout Managers! You can make some cool looking UIs!!!
-            _layoutManager = new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false);
+//            _layoutManager = new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false);
+
 
             //Create a reference to our RecyclerView and set the layout manager;
             _recyclerView = FindViewById<RecyclerView>(Resource.Id.mainActivity_recyclerView);

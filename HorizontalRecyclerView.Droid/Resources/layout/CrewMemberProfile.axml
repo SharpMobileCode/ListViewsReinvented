@@ -19,7 +19,8 @@
             android:layout_height="120dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="false"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:src="@drawable/picard" />
         <TextView
             android:id="@+id/crewMemberRankTextView"
             android:layout_toRightOf="@id/crewMemberImageView"

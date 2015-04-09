@@ -86,6 +86,8 @@
     <AndroidResource Include="Resources\drawable\Crusher_W.jpg" />
     <AndroidResource Include="Resources\layout\CrewMemberItem.axml" />
     <AndroidResource Include="Resources\layout\CrewMemberProfile.axml" />
+    <AndroidResource Include="Resources\layout-land\Main.axml" />
+    <AndroidResource Include="Resources\layout-land\CrewMemberItem.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
