@@ -33,6 +33,10 @@ namespace ListViewsReinvented.Droid
                 ? new LinearLayoutManager(this, LinearLayoutManager.Vertical, false) 
                 : new LinearLayoutManager(this, LinearLayoutManager.Horizontal, false);
 
+            //Experiement with a GridLayoutManger! You can create some cool looking UI!
+            //This create a gridview with 2 rows that scrolls horizontally.
+//            _layoutManager = new GridLayoutManager(this, 2, GridLayoutManager.Horizontal, false);
+
             //Create a reference to our RecyclerView and set the layout manager;
             _recyclerView = FindViewById<RecyclerView>(Resource.Id.mainActivity_recyclerView);
             _recyclerView.SetLayoutManager(_layoutManager);
